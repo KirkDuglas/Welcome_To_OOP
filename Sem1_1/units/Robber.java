@@ -1,7 +1,7 @@
 package units;
 
 //Разбойник
-public class Robber extends Person {
+public class Robber extends Person{
     public Robber(String name, int age) {
         super(name, 100, 10, age, 20, 40, "Knife", 50);
 
@@ -12,11 +12,6 @@ public class Robber extends Person {
     }
 
     public void stealGold(int val) {
-        this.gold += val;
-    }
-
-    @Override
-    public String toString() {
-        return super.name;
+        super.gold += val;
     }
 }

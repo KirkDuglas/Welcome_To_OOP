@@ -5,7 +5,7 @@ public abstract class Person {
     protected int power;
     protected int age;
     protected int armor;
-    protected int mann;
+    protected int Mana;
     protected int endurance; //выносливость
     protected String weapon;
     protected int gold;
@@ -21,6 +21,11 @@ public abstract class Person {
         this.endurance = endurance;
         this.weapon = weapon;
         this.gold = gold;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
     // public vooid attack(Person person) {
     //     person.helth -= this.power;

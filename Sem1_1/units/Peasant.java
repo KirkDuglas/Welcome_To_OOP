@@ -20,8 +20,5 @@ public class Peasant extends Person {
         return this.arrowsNum == 0 ? false : true;
     }
         
-    @Override
-    public String toString() {
-        return super.name;
-    }
+   
 }
