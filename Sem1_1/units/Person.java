@@ -31,9 +31,7 @@ public abstract class Person {
  @Override
     public String toString(){
         return (className + " >>> " +  name + " (" + age + ") " + position.x + ":" + position.y );
-    // @Override
-    // public String toString() {
-    //     return name;
+    
     }
     public Person findNearestPerson(ArrayList<Person> persons)
     {

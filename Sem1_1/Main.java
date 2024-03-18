@@ -1,5 +1,5 @@
 
-//Снайпер, колдун, копейщик, арбалетчик, монах
+
 import units.*;
 import java.util.*;
 
@@ -16,14 +16,7 @@ public class Main {
     }
     public static ArrayList<Person> Yellow;
     public static ArrayList<Person> Green;
-    // static ArrayList<Person> Yelow = new ArrayList<>();
-    // static ArrayList<Person> Green = new ArrayList<>();
-
-    // public static void main(String[] args) {
-    //     createTeam(Yelow, 10, 0);
-    //     createTeam(Green, 10, 3);
-    //     System.out.println(Yelow);
-    //     System.out.println(Green);
+    
 
     private static ArrayList<Person> teamCreator(int val, int numm){
         ArrayList<Person> team = new ArrayList<Person>();

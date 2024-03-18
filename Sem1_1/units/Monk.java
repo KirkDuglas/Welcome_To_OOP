@@ -1,5 +1,5 @@
 package units;
-
+//Монах
 public class Monk extends Person {
     private int mana;
     private int healVal;

@@ -1,4 +1,5 @@
 package units;
+//Колдун
 public class Magician extends Person {
     private int mana;
     private int healVal;

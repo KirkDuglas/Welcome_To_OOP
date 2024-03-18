@@ -1,5 +1,5 @@
 package units;
-
+//Арбалетчик
 public class Crossbowman extends Person{
     private int arrowsNum;
     boolean inGame = true;
