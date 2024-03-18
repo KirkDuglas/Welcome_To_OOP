@@ -3,8 +3,8 @@ package units;
 public class Crossbowman extends Person{
     private int arrowsNum;
     boolean inGame = true;
-    public Crossbowman(String name, int age) {
-        super(name, 60, 40, age, 20, 40, "gun", 40);
+    public Crossbowman(String name, int age, int x, int y) {
+        super(name, 60, 40, age, 20, 40, "Crossbow", 40, "Арбалетчик", x, y);
 
     }
 
