@@ -16,6 +16,7 @@ public abstract class Person implements ActionInterface{
     protected int gold;
     protected String className;
     protected Position position;
+    public int priority;
 
 
     public Person(String name, int health, int power, int age, int armor, int endurance, String weapon, int gold, String className, int x, int y) {
