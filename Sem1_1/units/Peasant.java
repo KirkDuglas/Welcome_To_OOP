@@ -1,5 +1,7 @@
 package units;
+import java.util.ArrayList;
 
+import Actions.ActionInterface;
 //Крестьянин
 public class Peasant extends Person {
     private int arrowsNum;
@@ -18,6 +20,12 @@ public class Peasant extends Person {
 
     public boolean isInGame() {
         return this.arrowsNum == 0 ? false : true;
+    }
+
+    @Override
+    public void step(ArrayList<Person> enemies, ArrayList<Person> friends) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'step'");
     }
         
    

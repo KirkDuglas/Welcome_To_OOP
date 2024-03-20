@@ -1,4 +1,7 @@
 package units;
+import java.util.ArrayList;
+
+import Actions.ActionInterface;
 //Монах
 public class Monk extends Person {
     private int mana;
@@ -23,5 +26,11 @@ public class Monk extends Person {
     private int price(String action){
         if (action == "heal") return healPrice;
         return 0;
+    }
+
+    @Override
+    public void step(ArrayList<Person> enemies, ArrayList<Person> friends) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'step'");
     }
 }

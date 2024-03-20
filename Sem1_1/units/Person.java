@@ -1,7 +1,10 @@
 package units;
+import Actions.ActionInterface;
+import Actions.Position;
 
 import java.util.*;
-public abstract class Person {
+
+public abstract class Person implements ActionInterface{
     protected String name;
     protected int health;
     protected int power;

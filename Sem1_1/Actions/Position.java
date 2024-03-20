@@ -1,10 +1,11 @@
-package units;
+package Actions;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Position {
-    protected int x, y;
+    public int x;
+    public int y;
     private static int width;
     private static int height;
     public Position(int x, int y){
