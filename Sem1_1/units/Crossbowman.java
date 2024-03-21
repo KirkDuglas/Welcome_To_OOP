@@ -3,12 +3,13 @@ package units;
 import java.util.ArrayList;
 
 import Actions.ActionInterface;
+import BaseSettings.SnipersSettings;
 //Арбалетчик
-public class Crossbowman extends Person{
+public class Crossbowman extends SnipersSettings{
     private int arrowsNum;
     boolean inGame = true;
     public Crossbowman(String name, int age, int x, int y) {
-        super(name, 60, 40, age, 20, 40, "Crossbow", 40, "Арбалетчик", x, y);
+        super(name, 60, 40, 20, 40, "Crossbow", pos, "Арбалетчик",;
 
     }
 

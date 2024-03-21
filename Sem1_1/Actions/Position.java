@@ -48,5 +48,7 @@ public class Position {
         float y = getY() - target.getY();
         return (float) Math.sqrt(x*x + y*y);
     }
+    public void setXY(int x2, int y2) {
+    }
 
 }
