@@ -1,46 +1,39 @@
 package units;
-import java.util.ArrayList;
-
-import Actions.ActionInterface;
+// import java.util.ArrayList;
+//import BaseSettings.*;
+import Actions.*;
+import BaseSettings.MagicSettings;
 //Колдун
-public class Magician extends Person {
-    private int mana;
-    private int healVal;
-    private int healPrice; 
-    private int attackPrice;
+public class Magician extends MagicSettings {
+    // // private int mana;
+    // private int healVal;
+    // private int healPrice; 
+    // private int attackPrice;
 
-    public Magician(String name, int age, int x, int y) {
-        super(name, 80, 30, age, 5, 30, "Stick", 30, "Колдун", x, y);
-        this.mana = 10;
-        this.healPrice = 2;
-        this.attackPrice = 1;
-    }
-
-
-    public void attack(Person person) {
-        person.health -= this.power;
-        this.mana -= price("attack"); //this.atackPrice; //price
-    }
-
-    public void heal(Person person, int val) {
-        person.health += price("heal"); //this.healVal;
-    }
-
-    public void heal(int val) {
-        super.health += this.healVal;
-        this.mana -= price("heal");//this.healPrice;
-    }
-
-    private int price(String action){
-        if (action == "heal") return healPrice;
-        else if (action == "atack") return attackPrice;
-        return 0;
+    public Magician(String name, Position pos) {
+        // private static final int HEALTH = 600;
+        // private static final int POWER = 40;
+        // private static final int AGILITY = 10;
+        // private static final int DEFENCE = 0;
+        // private static final int DISTANCE = 8;
+        // private static final int MANA = 100;
+        
+        // protected MagicSettings(String name, int health, int power, int armor, String weapon, String className, Position pos, int priority, int agility, int distance, int mana)
+        super(name, 600, 40, 0, "книга заклинаний", "Чернокнижник", pos, 1, 10, 8, 100);
+        // this.mana = 10;
+        // this.healPrice = 2;
+        // this.attackPrice = 1;
     }
 
 
     @Override
-    public void step(ArrayList<Person> enemies, ArrayList<Person> friends) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'step'");
+    public String toString()
+    {
+        return String.format("[Чернокнижник] %s, ❤️=%d, \uD83D\uDD25=%d, %s", name, health, mana, position.toString());
+    }
+
+    @Override
+    public String getInfo() {
+        return "Чернокнижник";
     }
 }

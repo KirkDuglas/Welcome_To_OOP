@@ -8,4 +8,6 @@ public interface ActionInterface {
      * @param enemies
      */
     void step(ArrayList<Person> enemies, ArrayList<Person> friends);
+
+    String getInfo();
 }

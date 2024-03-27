@@ -21,13 +21,17 @@ public abstract class Person implements ActionInterface {
     protected int agility;            // ловкость
     protected int distance; // дистанция воздействия на другой объект
     protected final int maxHealth;
-   // protected int Mana; //мана
+    protected int Mana; //мана
+    protected String conseq;
    //protected int gold;
 //    protected int endurance; //выносливость
     // public Person(String name, int health, int power, int age, int armor, int endurance, String weapon, int gold, String className, int x, int y) {
-    public Person(String name, int health, int power, int armor, String weapon, String className, Position pos, int priority, int agility, int distance) {
+    
+       
+    protected Person(String name, int health, int power, int armor, String weapon, String className, Position pos,
+            int priority, int agility, int distance) {
         this.name = name;
-        this.health =  getRound(health, 10);
+        this.health = getRound(health, 10);
         this.power = getRound(power, 10);
         this.armor = armor;
         this.weapon = weapon;
@@ -37,9 +41,18 @@ public abstract class Person implements ActionInterface {
         this.agility = getRound(agility, 10);
         this.distance = distance;
         this.maxHealth = this.health;
+        this.conseq = "";
         // this.endurance = endurance;
-         //this.gold = gold;
+        //this.gold = gold;
     }
+    public int getHealth() {
+        return health;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
     protected int getRound(int origin, int percent)
     {
         if (percent > origin)
@@ -75,7 +88,7 @@ public abstract class Person implements ActionInterface {
     }
  @Override
     public String toString(){
-        return (className + " >>> " +  name + " (" + weapon + ") " + position.x + ":" + position.y );
+        return (className + " >>> " +  name + " (" + weapon + ") " + position.toString());
     
     }
     public Person findNearestPerson(ArrayList<Person> persons)
@@ -83,13 +96,10 @@ public abstract class Person implements ActionInterface {
         Person target = null;
         float minDistance = Float.MAX_VALUE;
 
-        for (Person p : persons)
-        {
-            if (p.health > 0)
-            {
+        for (Person p : persons) {
+            if (p.health > 0) {
                 float dist = position.distanceTo(p.position);
-                if (dist < minDistance)
-                {
+                if (dist < minDistance) {
                     minDistance = dist;
                     target = p;
                 }
@@ -97,5 +107,9 @@ public abstract class Person implements ActionInterface {
         }
         return target;
     }
+    @Override
+    public String getInfo() {
+        return this.toString() + conseq;
+}
 }
 

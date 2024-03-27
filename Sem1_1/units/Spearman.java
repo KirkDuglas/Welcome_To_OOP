@@ -1,20 +1,25 @@
 package units;
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-import Actions.ActionInterface;
+import Actions.*;
+import BaseSettings.PehotaSettings;
 //Копейщик
-public class Spearman extends Person{
-    public Spearman(String name, int age, int x, int y) {
-        super(name, 80, 30, age, 25, 50, "Pike", 10, "Копейщик", x, y);
+public class Spearman extends PehotaSettings{
+    public Spearman(String name, Position pos) {
+        super(name, 1000, 80, 12, "Копье", "Пикинер", pos, 2, 10, 1);
     }
-
-    public void attack(Person person) {
-        person.health -= this.power;
+    // private static final int HEALTH = 1000;
+    // private static final int POWER = 80;
+    // private static final int AGILITY = 10;
+    // private static final int DEFENCE = 12;
+    // private static final int DISTANCE = 1;
+    @Override
+    public String toString() {
+        return String.format("[Пикинер] %s, ❤️=%d, %s", name, health, position.toString());
     }
 
     @Override
-    public void step(ArrayList<Person> enemies, ArrayList<Person> friends) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'step'");
+    public String getInfo() {
+        return "Пикинер " + conseq;
     }
 }

@@ -1,27 +1,26 @@
 package units;
-
-import java.util.ArrayList;
-
-import Actions.ActionInterface;
+// import java.util.ArrayList;
+import Actions.*;
+import BaseSettings.PehotaSettings;
 
 //Разбойник
-public class Robber extends Person{
-    public Robber(String name, int age, int x, int y) {
-        super(name, 100, 10, age, 20, 40, "Knife", 50, "Разбойник", x, y);
-
+public class Robber extends PehotaSettings{
+    public Robber(String name, Position pos) {
+        
+        super(name, 1000, 70, 10, "Нож", "Разбойник", pos, 2, 60, 1);
     }
-
-    public void attack(Person person) {
-        person.health -= this.power;
-    }
-
-    public void stealGold(int val) {
-        super.gold += val;
+    // private static final int HEALTH = 1000;
+    // private static final int POWER = 70;
+    // private static final int AGILITY = 60;
+    // private static final int DEFENCE = 10;
+    // private static final int DISTANCE = 1;
+    @Override
+    public String toString() {
+        return String.format("[Разбойник] %s, ❤️=%d, %s", name, health, position.toString());
     }
 
     @Override
-    public void step(ArrayList<Person> enemies, ArrayList<Person> friends) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'step'");
+    public String getInfo() {
+        return "Разбойник " + conseq;
     }
 }
