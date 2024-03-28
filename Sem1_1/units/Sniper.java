@@ -9,7 +9,7 @@ public class Sniper extends SnipersSettings {
     // boolean inGame = true;
 
     public Sniper(String name, Position pos) {
-        super(name, 800, 35, 5, "Лук", "Снайпер", pos, 3, 20, 16, 3, 12);
+        super(name, 800, 35, 5, pos, 3, 20, 16, 3, 12);
 
     }
 

@@ -6,7 +6,7 @@ import BaseSettings.PehotaSettings;
 //Копейщик
 public class Spearman extends PehotaSettings{
     public Spearman(String name, Position pos) {
-        super(name, 1000, 80, 12, "Копье", "Пикинер", pos, 2, 10, 1);
+        super(name, 1000, 80, 12, pos, 2, 10, 1);
     }
     // private static final int HEALTH = 1000;
     // private static final int POWER = 80;

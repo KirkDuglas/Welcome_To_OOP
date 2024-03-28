@@ -19,9 +19,9 @@ public abstract class PehotaSettings extends Person {
      * @param distance Дистанция воздействия на другой объект (10 у мага, 1 у крестьянина и тд)
      * @param pos      Положение в прогстранстве
      */
-    protected PehotaSettings(String name, int health, int power, int armor, String weapon, String className, Position pos, int priority, int agility,  int distance)
+    protected PehotaSettings(String name, int health, int power, int armor, Position pos, int priority, int agility,  int distance)
     {
-        super(name, health, power, armor, weapon, className, pos, priority, agility, distance);
+        super(name, health, power, armor, pos, priority, agility, distance);
         level = 1;
     }
 

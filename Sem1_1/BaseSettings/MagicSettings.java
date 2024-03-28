@@ -32,9 +32,9 @@ public abstract class MagicSettings extends Person {
      * @param mana     Маны в наличии
      * @param pos      Положение в прогстранстве
      */
-    protected MagicSettings(String name, int health, int power, int armor, String weapon, String className, Position pos, int priority, int agility, int distance, int mana)
+    protected MagicSettings(String name, int health, int power, int armor, Position pos, int priority, int agility, int distance, int mana)
     {
-        super(name, health, power, armor, weapon, className, pos, priority, agility, distance);
+        super(name, health, power, armor, pos, priority, agility, distance);
     
         this.mana = mana;
         this.maxMana = mana;

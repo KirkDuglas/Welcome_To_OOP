@@ -7,7 +7,7 @@ import BaseSettings.PehotaSettings;
 public class Robber extends PehotaSettings{
     public Robber(String name, Position pos) {
         
-        super(name, 1000, 70, 10, "Нож", "Разбойник", pos, 2, 60, 1);
+        super(name, 1000, 70, 10, pos, 2, 60, 1);
     }
     // private static final int HEALTH = 1000;
     // private static final int POWER = 70;

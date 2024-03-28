@@ -10,7 +10,7 @@ public class Monk extends MagicSettings {
     // private int healPrice;
 
     public Monk(String name, Position pos) {
-        super(name, 600, 40, 0, "Книга заклинаний", "Чернокнижник", pos, 1, 10, 8, 100);
+        super(name, 600, 40, 0, pos, 1, 10, 8, 100);
         // this.mana = 10;
         // this.healPrice = 2;
         // this.attackPrice = 1;

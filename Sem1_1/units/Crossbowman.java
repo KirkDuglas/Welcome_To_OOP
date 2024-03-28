@@ -25,7 +25,7 @@ public class Crossbowman extends SnipersSettings{
     // }
 
     public Crossbowman(String name, Position pos) {
-        super(name, 800, 35, 5, "Арбалет", "Арбалетчик", pos, 3, 20, 16, 3, 12);
+        super(name, 800, 35, 5, pos, 3, 20, 16, 3, 12);
 
     }
 

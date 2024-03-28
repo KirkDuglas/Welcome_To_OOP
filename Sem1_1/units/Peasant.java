@@ -14,7 +14,7 @@ public class Peasant extends Person {
     public Peasant(String name, Position pos) {
         // Person(String name, int health, int power, int armor, String weapon, String
         // className, Position pos, int priority, int agility, int distance)
-        super(name, 500, 30, 0, "Сумка", "Крестьянин", pos, 2, 30, 1);
+        super(name, 500, 30, 0, pos, 2, 30, 1);
         arrowsNum = maxArrows;
     }
 

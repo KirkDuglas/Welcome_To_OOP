@@ -27,9 +27,9 @@ public class SnipersSettings extends Person {
      */
     // public Person(String name, int health, int power, int armor, String weapon, String className, Position pos, int priority, int agility, int distance) 
 
-    protected SnipersSettings(String name, int health, int power, int armor, String weapon, String className,
+    protected SnipersSettings(String name, int health, int power, int armor, 
             Position pos, int priority, int agility, int distance, int maxDistance, int ammunition) {
-        super(name, health, power, armor, weapon, className, pos, priority, agility, distance);
+        super(name, health, power, armor, pos, priority, agility, distance);
         this.ammunition = ammunition;
         this.maxDistance = maxDistance;
         this.level = 1;

@@ -28,7 +28,7 @@ public abstract class Person implements ActionInterface {
     // public Person(String name, int health, int power, int age, int armor, int endurance, String weapon, int gold, String className, int x, int y) {
     
        
-    protected Person(String name, int health, int power, int armor, String weapon, String className, Position pos,
+    protected Person(String name, int health, int power, int armor, Position pos,
             int priority, int agility, int distance) {
         this.name = name;
         this.health = getRound(health, 10);

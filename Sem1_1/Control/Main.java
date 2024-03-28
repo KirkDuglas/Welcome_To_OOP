@@ -1,51 +1,52 @@
 package Control;
+
 import Actions.*;
 import View.*;
 import units.*;
-import BaseSettings.*;
+// import BaseSettings.*;
 import java.util.*;
 
 
 public class Main {
 
-    public static ArrayList<Position> greenPositions = new ArrayList<>();
-    public static ArrayList<Position> bluePositions = new ArrayList<>();
-    public static ArrayList<Position> allPositions = new ArrayList<>();
+    public static ArrayList<Person> greenPersons = new ArrayList<>();
+    public static ArrayList<Person> bluePersons = new ArrayList<>();
+    public static ArrayList<Person> allPersons = new ArrayList<>();
 
     public static void main(String[] args) {
-        createTeam(greenPositions, 10, 0);
-        createTeam(bluePositions, 10, 3);
-        allPositions.addAll(bluePositions);
-        allPositions.addAll(greenPositions);
+        createTeam(greenPersons, 10, 0);
+        createTeam(bluePersons, 10, 3);
+        allPersons.addAll(bluePersons);
+        allPersons.addAll(greenPersons);
 //        all.sort(new PrioritySort());
-        allPositions.sort((o1, o2) -> Integer.compare(o2.priority, o1.priority));
+        allPersons.sort((o1, o2) -> Integer.compare(o2.priority, o1.priority));
 
 //        for (int i = 0; i < 30; i++) {
         Scanner in = new Scanner(System.in);
         while (true)
         {
-//            for (Position p : allPositions) {
+//            for (Position p : allPersons) {
 //                System.out.println(p.getInfo());
 //            }
 
             View.view();
 
-            for (Position p : allPositions) {
-                if (greenPositions.contains(p)) {
-                    p.step(bluePositions, greenPositions);
+            for (Person p : allPersons) {
+                if (greenPersons.contains(p)) {
+                    p.step(bluePersons, greenPersons);
 
                 } else {
-                    p.step(greenPositions, bluePositions);
+                    p.step(greenPersons, bluePersons);
                 }
                 System.out.println(p.getInfo());
             }
             in.nextLine();
-            if (!isLiving(greenPositions))
+            if (!isLiving(greenPersons))
             {
                 System.out.println("Blue team wins!");
                 break;
             }
-            if (!isLiving(bluePositions))
+            if (!isLiving(bluePersons))
             {
                 System.out.println("Green wins!");
                 break;
@@ -55,16 +56,16 @@ public class Main {
 
     }
 
-    private static boolean isLiving(ArrayList<Position> team)
+    private static boolean isLiving(ArrayList<Person> team)
     {
-        for (Position Position : team) {
-            if (Position.getHealth() > 0)
+        for (Person person : team) {
+            if (person.getHealth() > 0)
                 return true;
         }
         return false;
     }
 
-    public static void createTeam(ArrayList<Position> team, int num, int start)
+    public static void createTeam(ArrayList<Person> team, int num, int start)
     {
         Random rnd = new Random();
         int cy = 0;
