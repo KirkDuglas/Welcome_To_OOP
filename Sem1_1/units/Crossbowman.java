@@ -31,8 +31,7 @@ public class Crossbowman extends SnipersSettings{
 
     @Override
     public String toString() {
-        return String.format("[Арбалетчик] (%s) %s { ❤️=%d, \uD83C\uDFF9=%d }", position.toString(), name, health,
-                ammunition);
+        return String.format("[Арбалетчик] (%s) %s { ❤️=%d, \uD83C\uDFF9=%d }", position.toString(), name, health, ammunition);
     }
     
     @Override
